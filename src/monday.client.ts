@@ -1,6 +1,6 @@
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 
-const client = new ApolloClient({
+export const client = new ApolloClient({
   uri: 'https://api.monday.com/v2/',
   headers: {
     Authorization: import.meta.env.VITE_MONDAY_API_KEY || '',
