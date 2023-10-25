@@ -40,7 +40,9 @@ export const ItemsStatusDuration = () => {
   const items = board?.items_page?.items as { id: string; name: string }[];
   const itemIds = items?.map((item) => item.id).join(',');
 
-  const { data: activityLogs, loading: activityLoading } = useQuery(
+  const { data: activityLogs, loading: activityLoading } = useQuery<{
+    boards: { activity_logs: { data: string; created_at: string }[] }[];
+  }>(
     gql`
     query {
       boards(ids: [${SHARED_BRIEF_FLOW_BOARD}]) {

@@ -1,5 +1,5 @@
 import { Container } from '@mui/material';
-import { ItemsStatusDuration } from './pages/ItemsStatusDuration1';
+import { ItemsStatusDuration } from './pages/ItemsStatusDuration';
 
 export const App = () => {
   return (
